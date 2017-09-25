@@ -8,6 +8,9 @@ void ofApp::setup(){
 	ofBackground(0,0,0);
 	ofSetFrameRate(60); 
 
+	ofSetWindowPosition(0, 0);
+	ofSetWindowShape(320, 320);
+
 	toggle = false;
 	stars.resize(800);
 
@@ -16,7 +19,7 @@ void ofApp::setup(){
 		stars[i].y = ofRandom(-ofGetHeight(), ofGetHeight());
 		stars[i].z = ofRandom(0, ofGetWidth());
 		stars[i].w = stars[i].z;
-		ofLog(OF_LOG_NOTICE, ofToString(stars[i]));
+		// ofLog(OF_LOG_NOTICE, ofToString(stars[i]));
 	}
 }
 
